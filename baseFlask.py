@@ -36,3 +36,16 @@ pwd_context = CryptContext(
         default="pbkdf2_sha256",
         pbkdf2_sha256__default_rounds=30000
 )
+
+def encrypt_password(password):
+    return pwd_context.hash(password)
+
+def check_encrypted_password(password, hashed):
+    return pwd_context.verify(password, hashed)
+
+#Mongodb setup
+client = pymongo.MongoClient("mongodb+srv://Key:Key@blockchainehr-ddd.mongodb.net/test?retryWrites=true&w=majority")
+
+mydb=client["Blockchain"]
+
+mycol=mydb["Blockhead"]
