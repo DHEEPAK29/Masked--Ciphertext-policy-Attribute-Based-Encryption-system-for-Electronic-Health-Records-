@@ -71,3 +71,12 @@ def addguardian():
     contract['level']=request.form['level']
     con.insert_one(contract)
     return redirect(url_for('searchRelID'))
+
+
+@app.route('/deleteguard',methods=['post'])
+def deleteguard():
+    val=dict(request.form)
+    myval=mydb['Guardian_contract']
+    myval.delete_one(val)
+    return redirect(url_for('linkedacc'))
+
