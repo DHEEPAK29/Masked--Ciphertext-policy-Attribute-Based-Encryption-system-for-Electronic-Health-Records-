@@ -80,3 +80,11 @@ def deleteguard():
     myval.delete_one(val)
     return redirect(url_for('linkedacc'))
 
+@app.route('/viewmore')
+def insure():
+    return render_template('insuranceAgentsContact.html')
+
+@app.route('/apply')
+def apply():
+    return render_template('applicationtoHospital.html')
+
