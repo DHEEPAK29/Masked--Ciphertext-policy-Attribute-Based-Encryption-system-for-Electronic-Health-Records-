@@ -88,3 +88,14 @@ def insure():
 def apply():
     return render_template('applicationtoHospital.html')
 
+@app.route('/medrecord')
+
+@app.route('/logs')
+
+@app.route('/model')
+
+@app.route('/warnings')
+
+@app.route('/doctor')
+
+
