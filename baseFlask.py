@@ -109,3 +109,9 @@ def genadd():
         prevs=x['hash']
         ind=ind+1
 
+
+@app.route('/genadder',methods=['post'])
+def genadder():
+    pid=request.form['owner']
+    now = datetime.datetime.now()
+    st=now.strftime("%Y-%m-%d %H:%M:%S")
