@@ -115,3 +115,8 @@ def genadder():
     pid=request.form['owner']
     now = datetime.datetime.now()
     st=now.strftime("%Y-%m-%d %H:%M:%S")
+        block={
+        '_id':request.form['_id'],
+        'owner':pid,
+
+        }
