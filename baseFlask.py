@@ -134,3 +134,6 @@ def genadder():
         'prev': request.form['prev'],
         'timestamp':st }
         }
+        myrow=mydb[pid]
+    myrow.insert_one(block)
+    return redirect(url_for('back'))
