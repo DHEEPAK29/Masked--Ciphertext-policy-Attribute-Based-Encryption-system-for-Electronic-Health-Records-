@@ -118,5 +118,19 @@ def genadder():
         block={
         '_id':request.form['_id'],
         'owner':pid,
-
+        'type':'General information',
+        'creator':session['user'],
+        'gender': request.form['gender'],
+        'Age':request.form['Age'],
+        'Weight':request.form['Weight'],
+        'height':request.form['height'],
+        'BMI':request.form['BMI'],
+        'Blood_grp':request.form['Blood_grp'],
+        'Blood_type':request.form['Blood_type'],
+        'BP':request.form['BP'],
+        'Diabetes':request.form['Diabetes'],
+        'Food_allergies':request.form['Food_allergies'],
+        'hash':request.form['hash'],
+        'prev': request.form['prev'],
+        'timestamp':st }
         }
