@@ -137,3 +137,8 @@ def genadder():
         myrow=mydb[pid]
     myrow.insert_one(block)
     return redirect(url_for('back'))
+
+
+@app.route('/bioc')
+def bioc():
+    return render_template('bsc.html')
