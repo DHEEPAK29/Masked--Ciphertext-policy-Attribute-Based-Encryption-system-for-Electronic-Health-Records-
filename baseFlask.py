@@ -142,3 +142,6 @@ def genadder():
 @app.route('/bioc')
 def bioc():
     return render_template('bsc.html')
+
+@app.route('/biocadd',methods=['post'])
+def biocadd():
