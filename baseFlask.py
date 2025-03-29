@@ -145,3 +145,11 @@ def bioc():
 
 @app.route('/biocadd',methods=['post'])
 def biocadd():
+           pid=request.form['pid']
+    myrow=mydb[pid]
+    patdoc= myrow.find()
+    ind=-1
+    prevs=0
+    for x in patdoc:
+        prevs=x['hash']
+        ind=ind+1
