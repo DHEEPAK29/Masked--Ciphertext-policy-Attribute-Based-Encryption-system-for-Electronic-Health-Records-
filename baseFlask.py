@@ -153,3 +153,31 @@ def biocadd():
     for x in patdoc:
         prevs=x['hash']
         ind=ind+1
+        now = datetime.datetime.now()
+    st=now.strftime("%Y-%m-%d %H:%M:%S")
+    block={
+        '_id':pid+'REC'+str(ind+1),
+        'owner':pid,
+        'type':'Clinical Laboratory information',
+        'creator':session['user'],
+        'Haemoglobin (g/dL)': request.form['hdl'],
+        'Glucose (random PP)':request.form['glr'],
+        'Glucose (fasting)':request.form['glf'],
+        #'HbA1c (EDTA Blood)':request.form['hba1c'],
+        'SERUM Appearance':request.form['seum'],
+        'Total Cholestrol':request.form['tch'],
+        'Triglycerides':request.form['try'],
+        'HDL Cholestrol':request.form['hch'],
+        'LDL Cholestrol':request.form['lch'],
+        'VLDL':request.form['vldl'],
+        'CHOL / HDL Ratio':request.form['chol'],
+        'Colour':request.form['colo'],
+        'Apperance':request.form['coloo'],
+        'PH':request.form['ph'],
+        'Protein':request.form['pro'],
+        'Sugar':request.form['sug'],
+        'Bile Salt':request.form['bsal'],
+        'Bile Pigment':request.form['bpig'],
+        'prev': prevs,
+        'timestamp':st
+        }
